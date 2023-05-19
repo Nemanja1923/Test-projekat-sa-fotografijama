@@ -1,0 +1,59 @@
+<!doctype html>
+<html>
+<head>
+<title>slike</title>
+<link rel="stylesheet" type="text/css" href="main.css">
+</head>
+
+<body>
+<link rel="stylesheet" type="text/js" href="main.js">
+<div class="container">
+<div class="panel active" style="background-image: url('img/img1.jpg')">
+<h3>Explore The World</h3>
+</div>
+
+<div class="panel" style="background-image: url('img/img2.jpg')">
+<h3>Explore The World</h3>
+</div>
+
+<div class="panel" style="background-image: url('img/img3.jpg')">
+<h3>Explore The World</h3>
+</div>
+
+<div class="panel" style="background-image: url('img/img4.jpg')">
+<h3>Explore The World</h3>
+</div>
+
+<div class="panel" style="background-image: url('img/img1.jpg')">
+<h3>Explore The World</h3>
+</div>
+
+<div class="panel" style="background-image: url('img/img2.jpg')">
+<h3>Explore The World</h3>
+</div>
+</div>
+</body>
+<script>
+const panels = document.querySelectorAll(".panel");
+
+if (panels.length > 0) {
+    panels.forEach((panel) => {
+        panel.addEventListener('click', () => {
+            removeActiveClass();
+            panel.classList.add("active");
+        });
+    });
+
+    function removeActiveClass() {
+        panels.forEach((panel) => {
+            if (panel.classList.contains("active")) {
+                panel.classList.remove("active");
+            }
+        });
+    }
+} else {
+    console.error("Nema elemenata sa klasom 'panel' na ovoj stranici.");
+}
+
+</script>
+</html>
